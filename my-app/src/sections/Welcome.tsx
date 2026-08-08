@@ -1,8 +1,19 @@
+import { Link } from 'react-router-dom';
 import present from '../assets/present.png';
 import CourseHero from '../components/CourseHero';
 import CourseFooter from '../components/CourseFooter';
 import SectionHeading from '../components/SectionHeading';
 import TipsSection from '../components/TipsSection';
+
+const challenges = [
+  { day: 1, path: '/first-challenge' },
+  { day: 2, path: '/second-challenge' },
+  { day: 3, path: '/third-challenge' },
+  { day: 4, path: '/fourth-challenge' },
+  { day: 5, path: '/fifth-challenge' },
+  { day: 6, path: '/sixth-challenge' },
+  { day: 7, path: '/seventh-challenge' },
+];
 
 const Welcome = () => {
   return (
@@ -120,6 +131,26 @@ const Welcome = () => {
                 e reconexão.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="course-section">
+        <div className="max-w-4xl mx-auto">
+          <SectionHeading>Acessar os exercícios</SectionHeading>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {challenges.map(({ day, path }) => (
+              <Link
+                key={path}
+                to={path}
+                className="course-card flex items-center justify-between hover:border-course-accent transition-colors no-underline"
+              >
+                <span className="font-semibold text-course-text">
+                  Exercício dia {String(day).padStart(2, '0')}
+                </span>
+                <span className="text-course-accent text-sm font-medium">Acessar →</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
