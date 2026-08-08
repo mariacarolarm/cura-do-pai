@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-course-bg text-course-text font-sans antialiased;
+  }
+}
+
+@layer components {
+  .course-page {
+    @apply w-full min-h-screen bg-course-bg;
+  }
+
+  .course-hero {
+    @apply bg-white border-b border-course-border;
+  }
+
+  .course-badge {
+    @apply inline-block bg-course-accent text-white text-xs sm:text-sm font-semibold uppercase tracking-wide py-2 px-5 rounded-full;
+  }
+
+  .course-btn {
+    @apply bg-course-accent text-white py-2.5 px-6 uppercase text-sm font-semibold rounded-full shadow-sm hover:bg-course-accent-light transition;
+  }
+
+  .course-section {
+    @apply py-6 sm:py-10 px-4 sm:px-6;
+  }
+
+  .course-section-heading {
+    @apply flex items-center gap-3 mb-6;
+  }
+
+  .course-section-heading-bar {
+    @apply w-1 h-8 bg-course-accent rounded-full shrink-0;
+  }
+
+  .course-section-heading-text {
+    @apply font-bold text-lg sm:text-xl text-course-text;
+  }
+
+  .course-card {
+    @apply bg-course-surface border border-course-border rounded-xl shadow-sm p-6 text-left text-course-muted;
+  }
+
+  .course-card-title {
+    @apply font-semibold text-course-text mb-2;
+  }
+
+  .course-footer {
+    @apply bg-course-bg-alt border-t border-course-border;
+  }
+
+  .course-footer-cta {
+    @apply inline-block bg-course-accent text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-course-accent-light transition;
+  }
+
+  .course-quote {
+    @apply bg-course-accent/5 border-l-4 border-course-accent rounded-r-lg p-4 italic text-course-text;
+  }
+
+  .course-affirmation {
+    @apply bg-course-bg-alt border border-course-border rounded-lg p-4 text-center font-semibold text-course-text;
+  }
+}
